@@ -137,7 +137,7 @@ Retries: 1 locally, 2 in CI (`CI=true`). Change in `playwright.config.ts`.
 |---------|-----|
 | `Executable doesn't exist ... run npx playwright install` | Run `npx playwright install chromium` (on Linux CI: `--with-deps`). If you already have Chrome/Chromium, set `CHROMIUM_EXECUTABLE_PATH` in `.env`. |
 | `EADDRINUSE` / port 4173 busy | Stop the other process, or set `LOCAL_BASE_URL=http://localhost:4200` and run the demo with `PORT=4200`. |
-| Visual test fails on a new machine | Pixel differences between OSes/fonts are normal. Regenerate with `npm run snapshots:update` on the OS used by CI, or run visual tests only in CI. |
+| Visual test fails on a new machine | The demo app bundles its font (`demo-app/public/fonts/`), so most font differences are gone. If your own app uses system fonts, expect OS/browser differences: regenerate with `npm run snapshots:update` on the OS used by CI, or run visual tests only in CI. |
 | Test passes alone but fails in the full run | Shared state or order dependence. Create unique data per test; avoid relying on counts that other tests change. |
 | `Timeout ... waiting for locator` | Open the trace (section 6). Check the locator and whether the page really reached that state. Don't just raise timeouts. |
 | Unknown `TEST_ENV` error | Use `local`, `dev` or `staging` (see `config/environments.ts`). |

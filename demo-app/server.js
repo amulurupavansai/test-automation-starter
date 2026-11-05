@@ -34,7 +34,7 @@ const payslip = {
   ],
 };
 
-const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json' };
+const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.ttf': 'font/ttf', '.txt': 'text/plain' };
 
 function send(res, status, body) {
   res.writeHead(status, { 'Content-Type': 'application/json' });

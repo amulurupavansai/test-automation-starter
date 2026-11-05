@@ -1,6 +1,9 @@
+/* Bundled font: makes rendering (and visual snapshots) identical on every machine. */
+@font-face { font-family: "Demo Sans"; src: url("/fonts/LiberationSans-Regular.ttf") format("truetype"); font-weight: 400; font-display: block; }
+@font-face { font-family: "Demo Sans"; src: url("/fonts/LiberationSans-Bold.ttf") format("truetype"); font-weight: 700; font-display: block; }
 :root { --bg:#f6f7f9; --fg:#1b1f24; --muted:#4a5560; --brand:#1d4ed8; --brand-fg:#fff; --err:#b00020; --ok:#146c2e; --line:#d0d5dd; }
 * { box-sizing: border-box; }
-body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--fg); margin: 0; }
+body { font-family: "Demo Sans", sans-serif; background: var(--bg); color: var(--fg); margin: 0; }
 header { background: #fff; border-bottom: 1px solid var(--line); padding: 12px 24px; display: flex; gap: 16px; align-items: center; }
 header .brand { font-weight: 700; margin-right: auto; }
 header a { color: var(--brand); }
@@ -18,3 +21,5 @@ table { width: 100%; border-collapse: collapse; background: #fff; margin-top: 12
 th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); }
 caption { text-align: left; color: var(--muted); padding: 4px 0; }
 .num { text-align: right; }
+
+input, select, button { font-family: inherit; }
