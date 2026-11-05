@@ -114,7 +114,7 @@ Rules of thumb:
 - **No fixed sleeps.** Use assertions such as `await expect(locator).toHaveText(...)`; they retry automatically.
 - **Keep tests independent** - each creates its own data (see `uniqueId()` in `utils/data.ts`) and can run in any order and in parallel.
 - **Data-driven:** add a row to `test-data/*.csv` or `*.json` - the loop in `tests/data-driven.spec.ts` creates a test per row.
-- **Visual baselines:** the first run on a new machine/OS needs baselines. Update deliberately with `npm run snapshots:update` and review the image diff in the PR. Baselines in this repo were created on Linux (matches CI).
+- **Visual baselines:** the committed baseline was rendered on the GitHub Actions runner, so CI compares strictly (0.2% of pixels). On your own machine the tolerance is 2%, because text anti-aliasing differs slightly between machines; that is also why `CI=1 npm test` can fail the visual test locally. Treat CI as the source of truth. To refresh a baseline, run the workflow, download the `*-actual.png` from the `junit-and-traces` artifact, review it, and commit it over the old one (or run `npm run snapshots:update` where all your CI runs happen). Always review baseline image changes in the PR.
 
 More on turning manual cases into automation: [`docs/manual-to-automated-guide.md`](docs/manual-to-automated-guide.md).
 

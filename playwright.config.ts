@@ -10,7 +10,13 @@ export default defineConfig({
   retries: isCI ? 2 : 1,
   workers: isCI ? 2 : undefined,
   timeout: 30_000,
-  expect: { timeout: 5_000 },
+  expect: {
+    timeout: 5_000,
+    // Visual snapshots. The committed baseline was rendered on the CI runner, so CI is strict.
+    // Developer machines anti-alias text slightly differently (~1%), so locally we allow 2%.
+    // A looser local check can miss tiny text edits - treat CI as the source of truth.
+    toHaveScreenshot: { maxDiffPixelRatio: isCI ? 0.002 : 0.02 },
+  },
 
   reporter: [
     ['list'],
