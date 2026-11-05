@@ -1,0 +1,9 @@
+case,firstName,lastName,email,department,salary,field,message
+missing first name,,Lee,lee@example.test,HR,50000,firstName,First name is required
+missing last name,Kim,,kim@example.test,HR,50000,lastName,Last name is required
+missing email,Kim,Lee,,HR,50000,email,Email is required
+email without domain,Kim,Lee,kim@,HR,50000,email,Enter a valid email address
+no department,Kim,Lee,kim@example.test,,50000,department,Department is required
+salary not a number,Kim,Lee,kim@example.test,HR,abc,salary,Salary must be a number
+salary zero,Kim,Lee,kim@example.test,HR,0,salary,Salary must be greater than zero
+salary negative,Kim,Lee,kim@example.test,HR,-100,salary,Salary must be greater than zero

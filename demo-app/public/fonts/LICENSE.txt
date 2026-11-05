@@ -1,0 +1,4 @@
+Liberation Sans (Regular, Bold) - Copyright (c) Red Hat, Inc. and Google/Ascender (Steve Matteson).
+Licensed under the SIL Open Font License, Version 1.1: https://openfontlicense.org
+Bundled so the demo app renders identically on every machine, which keeps
+visual-regression snapshots stable across operating systems and CI runners.

@@ -1,0 +1,14 @@
+{
+  "newEmployee": {
+    "firstName": "Farah",
+    "lastName": "Fischer",
+    "email": "farah.fischer@example.test",
+    "department": "Sales",
+    "salary": "67500"
+  },
+  "searchCases": [
+    { "term": "alice", "expected": ["Alice Anderson"] },
+    { "term": "ENGINEERING", "expected": ["Bob Baker", "Dmitri Dunn"] },
+    { "term": "zzz-no-match", "expected": [] }
+  ]
+}
