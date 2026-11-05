@@ -1,0 +1,8 @@
+{
+  "valid": { "email": "qa.user@example.test", "password": "Passw0rd!demo" },
+  "invalid": [
+    { "title": "wrong password", "email": "qa.user@example.test", "password": "WrongPass1!", "error": "Invalid email or password" },
+    { "title": "unknown user", "email": "nobody@example.test", "password": "Passw0rd!demo", "error": "Invalid email or password" },
+    { "title": "password in wrong case", "email": "qa.user@example.test", "password": "passw0rd!demo", "error": "Invalid email or password" }
+  ]
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employees - Demo HR App</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body data-page="employees">
+<main>
+  <h1>Employees</h1>
+  <label for="search">Search employees</label>
+  <input id="search" type="search" placeholder="Name, email or department">
+  <p id="result-count" aria-live="polite"></p>
+  <table id="employee-table">
+    <caption>Employee directory</caption>
+    <thead><tr><th scope="col">Name</th><th scope="col">Email</th><th scope="col">Department</th><th scope="col" class="num">Salary</th></tr></thead>
+    <tbody id="employee-rows"></tbody>
+  </table>
+  <p id="empty-state" hidden>No employees match your search.</p>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>

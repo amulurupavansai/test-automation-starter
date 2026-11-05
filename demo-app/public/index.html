@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in - Demo HR App</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body data-page="login">
+<main>
+  <h1>Sign in</h1>
+  <p>Demo credentials are in the README (fake data only).</p>
+  <form id="login-form" novalidate>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" autocomplete="username">
+    <p class="error" id="email-error" role="alert"></p>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password">
+    <p class="error" id="password-error" role="alert"></p>
+    <div id="login-error" class="alert error" role="alert" hidden></div>
+    <button type="submit">Sign in</button>
+  </form>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>

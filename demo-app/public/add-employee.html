@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add employee - Demo HR App</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body data-page="addEmployee">
+<main>
+  <h1>Add employee</h1>
+  <form id="employee-form" novalidate>
+    <label for="firstName">First name</label>
+    <input id="firstName" name="firstName">
+    <p class="error" id="firstName-error" role="alert"></p>
+    <label for="lastName">Last name</label>
+    <input id="lastName" name="lastName">
+    <p class="error" id="lastName-error" role="alert"></p>
+    <label for="email">Email</label>
+    <input id="email" name="email">
+    <p class="error" id="email-error" role="alert"></p>
+    <label for="department">Department</label>
+    <select id="department" name="department">
+      <option value="">Select a department</option>
+      <option>Finance</option><option>Engineering</option><option>HR</option><option>Operations</option><option>Sales</option>
+    </select>
+    <p class="error" id="department-error" role="alert"></p>
+    <label for="salary">Annual salary</label>
+    <input id="salary" name="salary" inputmode="decimal">
+    <p class="error" id="salary-error" role="alert"></p>
+    <div id="form-success" class="alert success" role="status" hidden></div>
+    <button type="submit">Add employee</button>
+  </form>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
